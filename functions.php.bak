@@ -1,0 +1,96 @@
+<?php
+
+/* sidebars */
+	register_sidebar( array(
+	'name' => __( 'sidebar' ),
+	'id' => 'sidebar-1',
+	'before_widget' => '<div id="%1$s" class="widgetSidebar %2$s">', // required to pickup woocommerce widget classes
+	'after_widget' => '</div>',
+) );
+	register_sidebar( array(
+	'name' => __( 'footer1' ),
+	'id' => 'sidebar-2',
+	'before_widget' => '',
+	'after_widget' => '',
+) );
+	register_sidebar( array(
+	'name' => __( 'footer2' ),
+	'id' => 'sidebar-3',
+	'before_widget' => '',
+	'after_widget' => '',
+) );
+	register_sidebar( array(
+	'name' => __( 'footer3' ),
+	'id' => 'sidebar-4',
+	'before_widget' => '',
+	'after_widget' => '',
+) );
+
+
+/* menus */
+function register_my_menus() {
+	register_nav_menus( array(
+		'top-menu' => "Top Menu",
+		'main-menu' => "Main Menu"
+		) 
+	);
+}
+add_action( 'init', 'register_my_menus' );
+
+// Register custom navigation walker for bootstrap dropdown menu
+   require_once('wp_bootstrap_navwalker.php');
+
+/* call google jquery */
+function my_scripts_method() {
+    wp_enqueue_script( 'jquery' );
+}    
+add_action('wp_enqueue_scripts', 'my_scripts_method');
+
+/* admin login logo */
+function login_logo() {
+echo '<style type="text/css">
+h1 a {background:url("http://www.root.lamtha2.co.uk/logos/lamtha2_logo.gif") !important; background-repeat:no-repeat !important; margin-left:50px !important; width:230px !important;}
+</style>';}
+add_action('login_head', 'login_logo');
+
+// allow editor to access appearance menu - themes, widgets and menus
+// get the the role object
+$role_object = get_role( 'editor' );
+// add $cap capability to this role object
+$role_object->add_cap( 'edit_theme_options' );
+
+// hide wp version from page source
+remove_action('wp_head', 'wp_generator');
+
+//remove query string from resources (e.g. plugings links to jquery cdn) to enable browser cacheing
+function _remove_script_version( $src ){
+    $parts = explode( '?ver', $src );
+        return $parts[0];
+}
+add_filter( 'script_loader_src', '_remove_script_version', 15, 1 );
+add_filter( 'style_loader_src', '_remove_script_version', 15, 1 );
+
+// autosave interval
+define('AUTOSAVE_INTERVAL', 300); // seconds
+
+
+
+
+/****** woocommerce  ******/
+
+// make theme compatible with woocommerce
+add_action( 'after_setup_theme', 'woocommerce_support' );
+function woocommerce_support() {
+    add_theme_support( 'woocommerce' );
+}
+
+// disable woocommerce theme stylesheet
+// add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
+
+// load my woocommerce custom stylesheet after woocommerce default css
+add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles', 11 );
+function theme_enqueue_styles() {
+	wp_enqueue_style( 'woocommerce-custom', get_template_directory_uri() . '/css/woocommerce-custom.css');
+}
+
+?>

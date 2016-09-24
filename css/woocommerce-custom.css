@@ -1,0 +1,26 @@
+/* line 11, ../sass/woocommerce-custom.scss */
+.widget_product_categories ul {
+  margin: 0; }
+  /* line 14, ../sass/woocommerce-custom.scss */
+  .widget_product_categories ul li {
+    list-style: none;
+    margin-bottom: .618em;
+    margin-left: -1.618em; }
+    /* line 19, ../sass/woocommerce-custom.scss */
+    .widget_product_categories ul li:before {
+      font-family: FontAwesome;
+      margin-right: .53em;
+      opacity: 0.25;
+      content: "\f114"; }
+    /* line 27, ../sass/woocommerce-custom.scss */
+    .widget_product_categories ul li.current-cat:before {
+      content: "\f115"; }
+/* line 34, ../sass/woocommerce-custom.scss */
+.widget_product_categories .children {
+  margin-top: .618em;
+  margin-left: .618em; }
+
+/* line 43, ../sass/woocommerce-custom.scss */
+td.label {
+  color: #333;
+  font-size: 100%; }

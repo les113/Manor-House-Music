@@ -1,0 +1,46 @@
+@import "compass/css3"; //calls compass mixims
+@import 'variables'; 
+
+// stylesheet to override
+// woocommerce styles
+
+// product widget styles taken from Woocommerce 'Storefront' theme
+
+// sidebar widget product categories
+.widget_product_categories {
+	ul {
+		margin: 0;
+
+		li {
+			list-style: none;
+			margin-bottom: .618em;
+			margin-left: -1.618em;
+
+			&:before {
+    font-family:FontAwesome;
+				margin-right: .53em;
+				opacity: 0.25;
+				content: "\f114";
+			}
+
+			&.current-cat {
+				&:before {
+					content: "\f115";
+				}
+			}
+		}
+	}
+
+	.children {
+		margin-top: .618em;
+		margin-left: .618em;
+	}
+}
+// end sidebar widget product categories
+
+// 
+
+td.label {
+	color:$bodyFont;
+	font-size:100%;
+}

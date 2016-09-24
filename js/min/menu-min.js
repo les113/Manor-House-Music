@@ -1,0 +1,1 @@
+$(document).ready(function(){function n(){var n=2*$(".navbar").height();$(window).scrollTop()>n?$(".navbar").addClass("scrolled"):$(".navbar").removeClass("scrolled")}$(".navbar").length>0&&$(window).on("scroll load resize",function(){n()})});
