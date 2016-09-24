@@ -1,1 +1,0 @@
-this version of colorbox is not compatible with jquery 1.9 and above
