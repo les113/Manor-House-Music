@@ -42,8 +42,8 @@
     <link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/font-awesome-4.2.0/css/font-awesome.min.css" >
 
     <!-- fonts -->
-	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
+	<link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
 
     <!-- stylesheets -->
     <link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/style.css">

@@ -10,21 +10,20 @@ default homepage
 	<!-- page header -->   
 	<?php include('pageheader.php') ?>
 
-
     <!-- content -->
     <div id="content"> <!-- page content -->
 
 		<!-- wordpress loop -->
  		<section>
-			<div class="container">
-				<div class="row">	
-					<div  class="col-md-12">
+			<div class="">
+				<div class="row">
+					<div  class="col-md-12">				
 						<!-- Start the Loop. --> 
 						<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 						
 						<!-- Display the Page's Content -->
-						<h1><?php //the_title(); ?></h1>
-						<div class="dashedline"></div>
+						<!-- not used <h1><?php //the_title(); ?></h1>-->
+
 						<?php the_content(); ?>
 						
 						<!-- Stop The Loop (but note the "else:" - see next line). -->
@@ -40,7 +39,7 @@ default homepage
 						<?php endif; ?>
 
 						<!-- /post -->
-					</div> 
+					</div>
 				</div>
 			</div>
 		</section>
@@ -49,7 +48,7 @@ default homepage
  		<section class="sectionOdd">
 			<div class="container">
 				<div class="row">	
-					<div class="col-md-6">
+					<div class="col-sm-12 col-md-6">
 						<div class="">
 						<?php
 						$page_id = 3042; // page to pull in
@@ -61,7 +60,7 @@ default homepage
 						?>
 						</div>
 					</div>	
-					<div class="col-md-6">
+					<div class="col-sm-6 col-md-6">
 						<div class="">
 						<?php
 						$page_id = 3042; // page's featured image
@@ -77,7 +76,7 @@ default homepage
  		<section class="sectionEven">
 			<div class="container">
 				<div class="row">	
-					<div class="col-md-6 col-md-push-6">
+					<div class="col-sm-12 col-md-6 col-md-push-6">
 						<div class="">
 						<?php
 						$page_id = 3044; // page to pull in
@@ -89,7 +88,7 @@ default homepage
 						?>
 						</div>
 					</div>	
-					<div class="col-md-6 col-md-pull-6">
+					<div class="col-sm-6 col-md-6 col-md-pull-6">
 						<div class="">
 						<?php
 						$page_id = 3044; // page's featured image
@@ -105,7 +104,7 @@ default homepage
  		<section class="sectionOdd">
 			<div class="container">
 				<div class="row">	
-					<div class="col-md-6">
+					<div class="col-sm-12 col-md-6">
 						<div class="">
 						<?php
 						$page_id = 3046; // page to pull in
@@ -117,7 +116,7 @@ default homepage
 						?>
 						</div>
 					</div>	
-					<div class="col-md-6">
+					<div class="col-sm-6 col-md-6">
 						<div class="">
 						<?php
 						$page_id = 3046; // page's featured image
@@ -134,7 +133,7 @@ default homepage
 			<div class="container">
 				<div class="row">	
 					<div class="col-md-12">
-						<div class="">
+						<div>
 						<?php
 						$page_id = 3048; // page to pull in
 						$post_id = get_post($page_id);
@@ -168,9 +167,9 @@ default homepage
 						<div class="textCenter marginTop"><a href="/contact-us/"><button class="btn">Contact Us</button></a></div>
 					</div>
 				</div>
-			<div>	
+			</div>	
 		</section>
-    </div><!-- end page container -->   
+    </div><!-- end content -->   
 
     <!-- footer -->
 	<?php get_footer(); ?>

@@ -13,7 +13,16 @@
 						<?php dynamic_sidebar( 'sidebar-4' ); ?>
 					  </div>   
 				</div>
-                
+				<div class="row">
+					<div class="col-sm-12 footermenu">
+						<?php /* function for menu */
+							wp_nav_menu( array(
+							  'theme_location' => 'footer-menu',
+							  )
+							);
+						?>
+					</div>
+				</div>
 				<div class="row">
                     <div class="col-sm-10">
 					   <h5 class="copyright">&copy;<?php echo date("Y"); ?> - <?php bloginfo( 'name' ); ?> <?php bloginfo('description'); ?></h5>
@@ -55,6 +64,10 @@
 		$(document).ready(function() {
 			$().UItoTop({ easingType: 'easeOutQuart' });
 		});
+	</script>
+	<!-- faq effects -->
+	<script>
+		var reveal_effect = 'slide';
 	</script>
 		
 <!-- analytics -->

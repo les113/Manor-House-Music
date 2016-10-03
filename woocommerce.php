@@ -13,9 +13,9 @@
 
 		<section>
 			<div class="">
-				<div class="container contentArea">
+				<div class="container">
 					<div class="row">	  
-						<div class="col-md-9" id="primary">
+						<div class="col-md-9" id="woocommerce">
 
 							<?php woocommerce_breadcrumb(); ?>
 							

@@ -13,9 +13,9 @@
 
 		<section>
 			<div class="">
-				<div class="container contentArea">
+				<div class="container">
 					<div class="row">	  
-						<div  class="col-sm-9">
+						<div  class="col-sm-8">
 
 							<!-- Start the Loop. --> 
 							<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
@@ -23,7 +23,7 @@
 							<!-- Display the Post's Content -->
 
 							<div><h1><?php the_title(); ?></h1></div>
-							<div class="dashedline"></div>
+
 							<?php the_content(); ?>
 
 							<!-- Stop The Loop (but note the "else:" - see next line). -->
@@ -41,7 +41,7 @@
 							<!-- /post -->
 							
 						</div> 
-						<div  class="col-xs-6 col-sm-3">
+						<div  class="col-xs-6 col-sm-4">
 							<!-- featured image -->
 							<div class="marginTop">
 							<?php if ( has_post_thumbnail() ) {

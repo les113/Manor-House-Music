@@ -23,17 +23,18 @@
 							<!-- Display the Post's Content -->
 
 							<h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-							<hr/>
-
+							<p><?php echo the_date() ?></p>
 							<?php the_excerpt(); ?>
+							<p><a href="<?php echo get_permalink(); ?>"> Read the article...</a></p>
+							<hr/>
 							
 							<!-- Stop The Loop (but note the "else:" - see next line). -->
 							<?php endwhile; 
 							
 							// Previous/next page navigation.
 							the_posts_pagination( array(
-								'prev_text'          => __( 'Previous page'),
-								'next_text'          => __( 'Next page'),
+								'prev_text'          => __( '<<'),
+								'next_text'          => __( '>>'),
 							) );
 							
 							else: ?>

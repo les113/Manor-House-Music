@@ -50,6 +50,7 @@
 function register_my_menus() {
 	register_nav_menus( array(
 		'top-menu' => "Top Menu",
+		'footer-menu' => "Footer Menu",
 		'main-menu' => "Main Menu"
 		) 
 	);
@@ -159,16 +160,16 @@ if (is_product_category()){
     echo $image;
 }
 
-/* Change number of products per row to 3 */
+/* Change number of products per row */
 add_filter('loop_shop_columns', 'loop_columns');
 if (!function_exists('loop_columns')) {
 	function loop_columns() {
-		return 3; // 3 products per row
+		return 3; // products per row
 	}
 }
 
-// Display 3 products per page
-add_filter( 'loop_shop_per_page', create_function( '$cols', 'return 9;' ), 20 );
+// Number of products per page
+add_filter( 'loop_shop_per_page', create_function( '$cols', 'return 12;' ), 20 );
 
 // remove the 'product description' text from product detail page
 add_filter( 'woocommerce_product_description_heading', 'remove_product_description_heading' );
@@ -176,5 +177,8 @@ function remove_product_description_heading() {
 return '';
 }
 
-
+// login problem 'you must enable cookies'
+ setcookie(TEST_COOKIE, 'WP Cookie check', 0, COOKIEPATH, COOKIE_DOMAIN);
+if ( SITECOOKIEPATH != COOKIEPATH )
+    setcookie(TEST_COOKIE, 'WP Cookie check', 0, SITECOOKIEPATH, COOKIE_DOMAIN);
 ?>

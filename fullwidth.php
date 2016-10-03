@@ -15,7 +15,7 @@ Template Name: full width page
 
 		<section>
 			<div class="">
-				<div class="container contentArea">
+				<div class="container">
 					<div class="row">	  
 						<div  class="col-md-12">
 

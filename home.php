@@ -13,7 +13,7 @@
 
 		<section>
 			<div class="">
-				<div class="container contentArea">
+				<div class="container">
 					<div class="row">	  
 						<div  class="col-md-9">
 
@@ -22,12 +22,26 @@
 
 							<!-- Display the Post's Content -->
 
-							<div><h1><?php the_title(); ?></h1></div>
-							<div class="dashedline"></div>
-							<?php the_content(); ?>
+							<!--post title-->
+							<h2><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+							<p><?php echo the_date() ?></p>
+							<?php the_excerpt(); ?>
+							<p><strong>Posted in <?php echo the_category() ?></strong></p>
+							<p class="tags"><?php echo the_tags(); ?></p>
+							<p><strong><a href="<?php echo get_permalink(); ?>">Read the article...</a></strong></p>
+
+							<hr/>
 
 							<!-- Stop The Loop (but note the "else:" - see next line). -->
-							<?php endwhile; else: ?>
+							<?php endwhile; 
+							
+							// Previous/next page navigation.
+							the_posts_pagination( array(
+								'prev_text'          => __( '<<'),
+								'next_text'          => __( '>>'),
+							) );
+							
+							else: ?>
 
 							<!-- The very first "if" tested to see if there were any Posts to -->
 							<!-- display.  This "else" part tells what do if there weren't any. -->
