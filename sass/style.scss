@@ -33,8 +33,6 @@ li {color:$bodyFont;}
 	} 
 }
 
-
-
 /* misc */
 section {
 	margin:15px 0;
@@ -62,29 +60,33 @@ section {
 .marginBottom {
     margin-bottom:20px;
 }
-.picleft img {
-    float:left; 
-    margin-right:20px;
-}
-.picright img {
-    float:right; 
-    margin-left:20px;
-}
 .clearfix {
     clear:both;
 }
-.textRight {
-	text-align:right;
-	}
-.textLeft {
-	text-align:left;
-	}
-.textCenter {
-	text-align:center;
-}
 hr {border-top:1px solid $secondaryColour;}
 
+/* wordpress alignments */
+img.alignright { float: right; margin: 0 0 1em 1em; }
+img.alignleft { float: left; margin: 0 1em 1em 0; }
+img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
+.alignright { float: right; }
+.alignleft { float: left; }
+.aligncenter { display: block; margin-left: auto; margin-right: auto; text-align:center; }
 
+
+/* wordpress styles */
+p.wp-caption-text {
+    font-size: 1.0em;
+    margin: 10px 0;
+    color: $secondaryColour;
+    font-style: italic;
+}
+	
+/* logo */
+.sitelogo img, .woocommerce-page .sitelogo img {
+	max-width:440px;
+	width:100%;
+}	
 
 /* topmenu */
 
@@ -344,6 +346,7 @@ hr {border-top:1px solid $secondaryColour;}
 /* buttons and forms*/
 
 .btn, input#fscf_submit1 {
+	margin-top:20px;
 	border:1px solid $secondaryColour;
 	transition: background-color 0.5s ease;
 	background-color:white;
@@ -358,13 +361,22 @@ hr {border-top:1px solid $secondaryColour;}
 	background-color:$secondaryColour;
 	color:$secondaryColourText;
 	}
-input, textarea {
-	border:1px solid $primaryColour;
+input, textarea, select {
+	border:1px solid $secondaryColour;
+}
+label {
+	margin-bottom:10px;
+}
+.screen-reader-text {
+	display:none;
 }
 @media only screen and (min-width : 768px) {
 	#FSContact1 label {
 		width:200px;
 		float:left;
+	}
+	div#fscf_submit_div1 {
+		padding-left:200px;	
 	}
 }
 

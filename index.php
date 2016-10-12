@@ -43,7 +43,7 @@
 						</div> 
 						<div  class="col-xs-6 col-sm-4">
 							<!-- featured image -->
-							<div class="marginTop">
+							<div style="margin-top:60px;">
 							<?php if ( has_post_thumbnail() ) {
 								echo '<img src="' . get_the_post_thumbnail_url($post_id, 'medium') . '" alt="" width="100%"/>';}
 							?>

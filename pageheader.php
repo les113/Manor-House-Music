@@ -38,7 +38,7 @@
 		<!-- bootstrap menu -->  
 		<div class="container">
 			<div class="row">	
-				<header class="col-md-12 textCenter">
+				<header class="col-md-12 aligncenter">
 					<div class="sitelogo marginTop marginBottom">
 						<a href="<?php echo site_url(); ?>"><img alt="Logo" src="<?php bloginfo( 'template_url' ); ?>/img/logo.png" /></a>
 					</div>

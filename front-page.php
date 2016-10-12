@@ -129,7 +129,7 @@ default homepage
 				</div>
 			</div>
 		</section>	
- 		<section class="sectionEven">
+ 		<section class="sectionEven hidden-xs hidden-sm">
 			<div class="container">
 				<div class="row">	
 					<div class="col-md-12">
@@ -148,7 +148,7 @@ default homepage
 			</div>
 		</section>
  		<section>
-			<div class="container">
+			<div class="container hidden-xs hidden-sm">
 				<div class="row">	
 					<div class="col-md-6">
 						<iframe width="100%" height="315" src="https://www.youtube.com/embed/<?php echo get_post_meta($post->ID, "video1-id", true); ?>" frameborder="0" allowfullscreen></iframe>
@@ -160,11 +160,11 @@ default homepage
 			</div>
 			<div class="container">
 				<div class="row">	
-					<div class="col-md-12 marginTop marginBottom">
-						<div class="textCenter">
+					<div class="col-md-12 marginTop marginBottom aligncenter">
+						<div>
 							<h2>Contact us to discuss your event</h2>
 						</div>
-						<div class="textCenter marginTop"><a href="/contact-us/"><button class="btn">Contact Us</button></a></div>
+						<div><a href="/contact-us/"><button class="btn">Contact Us</button></a></div>
 					</div>
 				</div>
 			</div>	

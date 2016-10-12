@@ -22,8 +22,8 @@
 							<!-- Start the Loop. --> 
 							<?php woocommerce_content(); ?>
 							
-							<h2>Top Rated Products</h2>
-							<?php echo do_shortcode("[top_rated_products per_page='4']"); ?>
+							<!--<h2>Top Rated Products</h2>-->
+							<?php //echo do_shortcode("[top_rated_products per_page='4']"); ?>
 							
 						</div> 
 						<div class="col-md-3" id="">

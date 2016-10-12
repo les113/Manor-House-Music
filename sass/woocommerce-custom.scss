@@ -49,10 +49,10 @@ td.label {
 // widget price filter 
 .woocommerce {
 	.widget_price_filter .ui-slider .ui-slider-range {
-	background-color: $deemphasisColour;
+	background-color: $secondaryColour;
 	}
 	.widget_price_filter .price_slider_wrapper .ui-widget-content, .widget_price_filter .ui-slider .ui-slider-handle {
-	background-color: $emphasisColour;
+	background-color: $primaryColour;
 	}
 }
 
@@ -118,6 +118,10 @@ button.single_add_to_cart_button.button.alt:hover {
 	background:$emphasisColour;
 }
 
+// disabled buttons
+.woocommerce #respond input#submit.alt.disabled, .woocommerce #respond input#submit.alt.disabled:hover, .woocommerce #respond input#submit.alt:disabled, .woocommerce #respond input#submit.alt:disabled:hover, .woocommerce #respond input#submit.alt:disabled[disabled], .woocommerce #respond input#submit.alt:disabled[disabled]:hover, .woocommerce a.button.alt.disabled, .woocommerce a.button.alt.disabled:hover, .woocommerce a.button.alt:disabled, .woocommerce a.button.alt:disabled:hover, .woocommerce a.button.alt:disabled[disabled], .woocommerce a.button.alt:disabled[disabled]:hover, .woocommerce button.button.alt.disabled, .woocommerce button.button.alt.disabled:hover, .woocommerce button.button.alt:disabled, .woocommerce button.button.alt:disabled:hover, .woocommerce button.button.alt:disabled[disabled], .woocommerce button.button.alt:disabled[disabled]:hover, .woocommerce input.button.alt.disabled, .woocommerce input.button.alt.disabled:hover, .woocommerce input.button.alt:disabled, .woocommerce input.button.alt:disabled:hover, .woocommerce input.button.alt:disabled[disabled], .woocommerce input.button.alt:disabled[disabled]:hover {
+	background-color:$secondaryColour;
+}
 
 //hide add to cart buttons on listing pages
 .woocommerce ul.products li.product .button {
@@ -129,7 +133,7 @@ button.single_add_to_cart_button.button.alt:hover {
 	color:$emphasisColour;
 }
 del span.woocommerce-Price-amount.amount {
-	color:$deemphasisColourText;
+	color:$emphasisColourText;
 }
 ins {
 	text-decoration:none;
@@ -216,6 +220,12 @@ span.posted_in {
 .variations .label {
 	color:$bodyFont;
 	font-size: 14px;
+}
+
+.woocommerce #reviews #comments ol.commentlist li .comment-text {
+    margin: 0 0 0 -40px !important;
+    border: 1px solid $secondaryColour !important;
+    border-radius: 0 !important;
 }
 
 
