@@ -37,7 +37,7 @@ li {color:$bodyFont;}
 section {
 	margin:15px 0;
 }
-.home section img{
+.home section img, .featImg img {
 	width:100%;
 	height:auto;
 }
@@ -208,7 +208,7 @@ p.wp-caption-text {
 }
 .metaslider {
 	z-index:0;
-	margin-top:-90px;
+	margin-top: 0px;
 	max-height: 700px;
     overflow: hidden;
 }
@@ -238,6 +238,7 @@ p.wp-caption-text {
 @media only screen and (max-width : 768px) {
 	.nivo-caption {
 		font-size: 32px;
+		top:25%;
 	}
 }	
 
@@ -246,7 +247,7 @@ p.wp-caption-text {
 		padding-bottom:10px;
 	}
 	.metaslider {
-		margin-top:-110px;
+		margin-top:-95px;
 	}
 }	
 @media only screen and (min-width : 1366px) {
@@ -435,7 +436,7 @@ blockquote {
 
 /* small phones */
 @media only screen and (max-width : 480px) {
-	.slideshow {display:none;}
+
 }
 
 /* Extra Small Devices, Tablets - col-xs-x */

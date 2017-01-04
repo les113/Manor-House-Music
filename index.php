@@ -41,12 +41,16 @@
 							<!-- /post -->
 							
 						</div> 
-						<div  class="col-xs-6 col-sm-4">
+						<div class="col-xs-6 col-sm-4 featImg">
 							<!-- featured image -->
 							<div style="margin-top:60px;">
-							<?php if ( has_post_thumbnail() ) {
-								echo '<img src="' . get_the_post_thumbnail_url($post_id, 'medium') . '" alt="" width="100%"/>';}
-							?>
+							<?php if ( has_post_thumbnail() ) : ?>
+								<?php the_post_thumbnail($post_id, 'medium'); 
+								//echo get_post(get_post_thumbnail_id())->post_title; // the featured image title
+								//echo get_post(get_post_thumbnail_id())->post_excerpt; // the featured image caption
+								//echo get_post(get_post_thumbnail_id())->post_content; // the featured image description
+								?>
+							<?php endif; ?>
 							</div>
 							<!-- sidebar for pages -->
 							<?php dynamic_sidebar( 'sidebar-6' ); ?>

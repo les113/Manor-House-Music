@@ -13,7 +13,7 @@
 	 */
 	global $page, $paged;
 
-	wp_title( '|', true, 'right' );
+	wp_title( '-', true, 'right' );
 
 	// Add the blog name.
 	bloginfo( 'name' );
@@ -21,7 +21,7 @@
 	// Add the blog description for the home/front page.
 	$site_description = get_bloginfo( 'description', 'display' );
 	if ( $site_description && ( is_home() || is_front_page() ) )
-		echo " | $site_description";
+		echo " $site_description";
 	?>
 	</title>
     
@@ -39,12 +39,11 @@
 
     <!-- bootstrap -->
     <link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/bootstrap-3.3.1/css/bootstrap.min.css" >
-    <link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/font-awesome-4.2.0/css/font-awesome.min.css" >
 
     <!-- fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
-	<link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
-
+	
     <!-- stylesheets -->
     <link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/style.css">
 

@@ -66,7 +66,7 @@ default homepage
 						$page_id = 3042; // page's featured image
 						$post_id = get_post($page_id);
 						if ( ( is_singular() || is_home() ) && current_theme_supports( 'post-thumbnails' ) ) :
-						echo get_the_post_thumbnail($post_id, 'large'); ?>
+						echo get_the_post_thumbnail($post_id, 'medium', $post_title); ?>
 						<?php endif;?>
 						</div>
 					</div>					
@@ -94,7 +94,7 @@ default homepage
 						$page_id = 3044; // page's featured image
 						$post_id = get_post($page_id);
 						if ( ( is_singular() || is_home() ) && current_theme_supports( 'post-thumbnails' ) ) :
-						echo get_the_post_thumbnail($post_id, 'large'); ?>
+						echo get_the_post_thumbnail($post_id, 'medium', $post_title); ?>
 						<?php endif;?>
 						</div>
 					</div>					
@@ -122,7 +122,7 @@ default homepage
 						$page_id = 3046; // page's featured image
 						$post_id = get_post($page_id);
 						if ( ( is_singular() || is_home() ) && current_theme_supports( 'post-thumbnails' ) ) :
-						echo get_the_post_thumbnail($post_id, 'large'); ?>
+						echo get_the_post_thumbnail($post_id, 'medium', $post_title); ?>
 						<?php endif;?>
 						</div>
 					</div>					

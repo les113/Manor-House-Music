@@ -25,7 +25,7 @@
 				</div>
 				<div class="row">
                     <div class="col-sm-10">
-					   <h5 class="copyright">&copy;<?php echo date("Y"); ?> - <?php bloginfo( 'name' ); ?> <?php bloginfo('description'); ?></h5>
+					   <h5 class="copyright">&copy;<?php echo date("Y"); ?> - <?php bloginfo( 'name' ); ?>, <?php bloginfo('description'); ?></h5>
                     </div>
 					<div class="col-sm-2" >
 						<div><a href="http://www.lamtha2.co.uk" target="_blank"><span class="designedBy"></span></a></div>

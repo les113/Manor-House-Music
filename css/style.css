@@ -61,7 +61,7 @@ section {
   margin: 15px 0; }
 
 /* line 40, ../sass/style.scss */
-.home section img {
+.home section img, .featImg img {
   width: 100%;
   height: auto; }
 
@@ -267,7 +267,7 @@ p.wp-caption-text {
 /* line 209, ../sass/style.scss */
 .metaslider {
   z-index: 0;
-  margin-top: -90px;
+  margin-top: 0px;
   max-height: 700px;
   overflow: hidden; }
 
@@ -303,58 +303,59 @@ p.wp-caption-text {
 @media only screen and (max-width: 768px) {
   /* line 239, ../sass/style.scss */
   .nivo-caption {
-    font-size: 32px; } }
+    font-size: 32px;
+    top: 25%; } }
 @media only screen and (min-width: 992px) {
-  /* line 245, ../sass/style.scss */
+  /* line 246, ../sass/style.scss */
   .transwrap {
     padding-bottom: 10px; }
 
-  /* line 248, ../sass/style.scss */
+  /* line 249, ../sass/style.scss */
   .metaslider {
-    margin-top: -110px; } }
+    margin-top: -95px; } }
 @media only screen and (min-width: 1366px) {
-  /* line 253, ../sass/style.scss */
+  /* line 254, ../sass/style.scss */
   .metaslider {
     margin-top: -260px; }
 
-  /* line 256, ../sass/style.scss */
+  /* line 257, ../sass/style.scss */
   .theme-default .nivo-directionNav a {
     top: 450px; }
 
-  /* line 259, ../sass/style.scss */
+  /* line 260, ../sass/style.scss */
   .nivo-caption {
     top: 400px;
     padding: 0 300px !important; } }
 /* footer */
-/* line 270, ../sass/style.scss */
+/* line 271, ../sass/style.scss */
 #prefooter {
   color: #fff; }
-  /* line 272, ../sass/style.scss */
+  /* line 273, ../sass/style.scss */
   #prefooter .container {
     padding: 5px 0; }
 
-/* line 274, ../sass/style.scss */
+/* line 275, ../sass/style.scss */
 #footer {
   color: #fff;
   min-height: 210px;
   text-align: left;
   margin-top: 10px; }
-  /* line 279, ../sass/style.scss */
+  /* line 280, ../sass/style.scss */
   #footer li {
     list-style-type: none;
     color: #fff; }
-  /* line 283, ../sass/style.scss */
+  /* line 284, ../sass/style.scss */
   #footer h2, #footer h5, #footer a {
     color: #fff; }
-  /* line 286, ../sass/style.scss */
+  /* line 287, ../sass/style.scss */
   #footer h4 {
     font-size: 20px; }
 
-/* line 291, ../sass/style.scss */
+/* line 292, ../sass/style.scss */
 .copyright {
   margin-top: 40px; }
 
-/* line 295, ../sass/style.scss */
+/* line 296, ../sass/style.scss */
 .designedBy {
   background-image: url(../img/designedbysprite.jpg);
   background-position: 0 0;
@@ -365,49 +366,49 @@ p.wp-caption-text {
   overflow: hidden;
   margin-top: 30px; }
 
-/* line 304, ../sass/style.scss */
+/* line 305, ../sass/style.scss */
 .designedBy:hover {
   background-image: url(../img/designedbysprite.jpg);
   background-position: 0 -29px; }
 
 /* site social icons */
-/* line 310, ../sass/style.scss */
+/* line 311, ../sass/style.scss */
 .social-links {
   margin: 8px 0 0 -40px; }
-  /* line 312, ../sass/style.scss */
+  /* line 313, ../sass/style.scss */
   .social-links h2 {
     position: absolute;
     margin-left: -9999px; }
-  /* line 316, ../sass/style.scss */
+  /* line 317, ../sass/style.scss */
   .social-links li {
     margin-right: 10px;
     list-style: none;
     display: inline; }
-  /* line 321, ../sass/style.scss */
+  /* line 322, ../sass/style.scss */
   .social-links li a {
     overflow: hidden; }
-  /* line 324, ../sass/style.scss */
+  /* line 325, ../sass/style.scss */
   .social-links .fa {
     color: #fff;
     font-size: 2.4rem;
     text-decoration: none; }
 
-/* line 331, ../sass/style.scss */
+/* line 332, ../sass/style.scss */
 #topbar .social-links {
   margin: 0; }
-/* line 334, ../sass/style.scss */
+/* line 335, ../sass/style.scss */
 #topbar .social-links .fa {
   color: #fff;
   font-size: 1.8rem;
   padding: 10px;
   margin: 0; }
-/* line 340, ../sass/style.scss */
+/* line 341, ../sass/style.scss */
 #topbar .social-links .fa:hover {
   background-color: #fff;
   color: #56729A; }
 
 /* buttons and forms*/
-/* line 348, ../sass/style.scss */
+/* line 349, ../sass/style.scss */
 .btn, input#fscf_submit1 {
   margin-top: 20px;
   border: 1px solid #A2B464;
@@ -418,51 +419,51 @@ p.wp-caption-text {
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
   border-radius: 0; }
-  /* line 356, ../sass/style.scss */
+  /* line 357, ../sass/style.scss */
   .btn .fa, input#fscf_submit1 .fa {
     padding-left: 10px; }
 
-/* line 360, ../sass/style.scss */
+/* line 361, ../sass/style.scss */
 .btn:hover, input#fscf_submit1:hover {
   background-color: #A2B464;
   color: #fff; }
 
-/* line 364, ../sass/style.scss */
+/* line 365, ../sass/style.scss */
 input, textarea, select {
   border: 1px solid #A2B464; }
 
-/* line 367, ../sass/style.scss */
+/* line 368, ../sass/style.scss */
 label {
   margin-bottom: 10px; }
 
-/* line 370, ../sass/style.scss */
+/* line 371, ../sass/style.scss */
 .screen-reader-text {
   display: none; }
 
 @media only screen and (min-width: 768px) {
-  /* line 374, ../sass/style.scss */
+  /* line 375, ../sass/style.scss */
   #FSContact1 label {
     width: 200px;
     float: left; }
 
-  /* line 378, ../sass/style.scss */
+  /* line 379, ../sass/style.scss */
   div#fscf_submit_div1 {
     padding-left: 200px; } }
-/* line 385, ../sass/style.scss */
+/* line 386, ../sass/style.scss */
 button#catapultCookie {
   background-color: #A2B464;
   color: #fff; }
 
-/* line 391, ../sass/style.scss */
+/* line 392, ../sass/style.scss */
 .easy_t_single_testimonial {
   outline: 1px solid #A2B464;
   margin-bottom: 30px; }
 
-/* line 395, ../sass/style.scss */
+/* line 396, ../sass/style.scss */
 .easy_t_single_testimonial {
   position: relative; }
 
-/* line 398, ../sass/style.scss */
+/* line 399, ../sass/style.scss */
 .easy_testimonial:after {
   background-image: url("../img/quote.gif");
   position: absolute;
@@ -474,56 +475,52 @@ button#catapultCookie {
   bottom: -23px;
   left: 20px; }
 
-/* line 407, ../sass/style.scss */
+/* line 408, ../sass/style.scss */
 .testimonial_body {
   color: #56729A; }
 
-/* line 410, ../sass/style.scss */
+/* line 411, ../sass/style.scss */
 .easy_testimonial_image_wrapper {
   display: none; }
 
-/* line 413, ../sass/style.scss */
+/* line 414, ../sass/style.scss */
 .testimonial_author {
   margin-top: 15px;
   color: #A2B464; }
 
-/* line 417, ../sass/style.scss */
+/* line 418, ../sass/style.scss */
 blockquote {
   border-left: 5px solid #A2B464; }
 
-/* line 422, ../sass/style.scss */
+/* line 423, ../sass/style.scss */
 .ewd-ufaq-post-margin-symbol span {
   font-size: 16px !important;
   margin-top: 6px !important; }
 
-/* line 426, ../sass/style.scss */
+/* line 427, ../sass/style.scss */
 .ewd-ufaq-post-margin-symbol {
   color: white;
   background-color: #A2B464; }
 
-/* line 430, ../sass/style.scss */
+/* line 431, ../sass/style.scss */
 .ewd-ufaq-post-active .ewd-ufaq-post-margin-symbol, .ewd-ufaq-post-margin-symbol:hover {
   background-color: #56729A; }
 
 /* responsive adjustments */
 /* small phones */
-@media only screen and (max-width: 480px) {
-  /* line 438, ../sass/style.scss */
-  .slideshow {
-    display: none; } }
 /* Extra Small Devices, Tablets - col-xs-x */
 @media only screen and (max-width: 768px) {
-  /* line 443, ../sass/style.scss */
+  /* line 444, ../sass/style.scss */
   .navbar .navbar-collapse {
     text-align: right; } }
 /* Small Devices, Desktops - col-sm-x  */
 @media only screen and (min-width: 768px) {
-  /* line 450, ../sass/style.scss */
+  /* line 451, ../sass/style.scss */
   .navbar {
     margin-bottom: 0px; }
 
   /* center navbar */
-  /* line 455, ../sass/style.scss */
+  /* line 456, ../sass/style.scss */
   #mainnav .navbar-nav {
     float: none;
     margin: 0 auto;
@@ -531,7 +528,7 @@ blockquote {
     text-align: center;
     border-top: solid 1px #56729A;
     border-bottom: solid 1px #56729A; }
-  /* line 463, ../sass/style.scss */
+  /* line 464, ../sass/style.scss */
   #mainnav .navbar-nav > li {
     display: inline-block;
     float: none; } }

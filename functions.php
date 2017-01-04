@@ -169,7 +169,21 @@ if (!function_exists('loop_columns')) {
 }
 
 // Number of products per page
-add_filter( 'loop_shop_per_page', create_function( '$cols', 'return 12;' ), 20 );
+add_filter( 'loop_shop_per_page', create_function( '$cols', 'return 9;' ), 20 );
+
+// number of related products on product page
+function woo_related_products_limit() {
+  global $product;
+	$args['posts_per_page'] = 3;
+	return $args;
+}
+add_filter( 'woocommerce_output_related_products_args', 'jk_related_products_args' );
+  function jk_related_products_args( $args ) {
+	$args['posts_per_page'] = 3; // 3 related products
+	$args['columns'] = 3; // arranged in 3 columns
+	return $args;
+}
+
 
 // remove the 'product description' text from product detail page
 add_filter( 'woocommerce_product_description_heading', 'remove_product_description_heading' );
@@ -262,5 +276,12 @@ function rblythe_image_resize_dimensions( $output, $orig_w, $orig_h, $dest_w, $d
 add_filter( 'image_resize_dimensions', 'rblythe_image_resize_dimensions', 10, 6);
 
 // end image crop function
+
+// allow shop manager to edit appearance (theme, menus etc)
+function add_theme_caps() {
+    $role = get_role( 'shop_manager' );
+    $role->add_cap( 'edit_theme_options' ); 
+}
+add_action( 'admin_init', 'add_theme_caps');
 
 ?>
