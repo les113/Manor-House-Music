@@ -47,28 +47,23 @@
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
 
-    <!-- Bootstrap JavaScript plugins -->
-    <script src="<?php bloginfo( 'template_url' ); ?>/bootstrap-3.3.1/js/bootstrap.min.js"></script> 
+    <!-- Bootstrap JavaScript plugins  -->
+    <!--<script src="<?php bloginfo( 'template_url' ); ?>/bootstrap-3.3.1/js/bootstrap.min.js"></script>-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script> 
 	
     <!-- smooth scroll script -->
     <script src="<?php bloginfo( 'template_url' ); ?>/js/smoothscroll.js" type="text/javascript" ></script>
 
-	<!-- To Top scripts http://www.mattvarone.com/web-design/uitotop-jquery-plugin/ -->
-	<!-- the necessary css for UItoTop -->	
+	<!-- UI To Top script http://www.mattvarone.com/web-design/uitotop-jquery-plugin/ -->
 	<link rel="stylesheet" type="text/css" media="screen" href="<?php bloginfo( 'template_url' ); ?>/jquery.ui.totop/css/ui.totop.css" />
-	<!-- easing plugin ( optional ) -->
 	<script src="<?php bloginfo( 'template_url' ); ?>/jquery.ui.totop/js/jquery.easing.js" type="text/javascript"></script>
-	<!-- UItoTop plugin -->
 	<script src="<?php bloginfo( 'template_url' ); ?>/jquery.ui.totop/js/jquery.ui.totop.js" type="text/javascript"></script>
 	<script>
 		$(document).ready(function() {
 			$().UItoTop({ easingType: 'easeOutQuart' });
 		});
 	</script>
-	<!-- faq effects -->
-	<script>
-		var reveal_effect = 'slide';
-	</script>
+
 		
 <!-- analytics -->
 <?php include('inc/analytics.php') ?>

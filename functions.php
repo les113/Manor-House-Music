@@ -25,14 +25,12 @@
 	'before_widget' => '',
 	'after_widget' => '',
 ) );
-/*
 	register_sidebar( array(
-	'name' => __( 'homepage' ),
+	'name' => __( 'sidebar-productpage' ),
 	'id' => 'sidebar-5',
 	'before_widget' => '',
 	'after_widget' => '',
 ) );
-*/
 	register_sidebar( array(
 	'name' => __( 'sidebar-page' ),
 	'id' => 'sidebar-6',
@@ -69,12 +67,6 @@ function special_nav_class($classes, $item){
      return $classes;
 }
 
-/* call google jquery */
-function my_scripts_method() {
-    wp_enqueue_script( 'jquery' );
-}    
-add_action('wp_enqueue_scripts', 'my_scripts_method');
-
 /* admin login logo */
 function login_logo() {
 echo '<style type="text/css">
@@ -103,6 +95,7 @@ add_filter( 'style_loader_src', '_remove_script_version', 15, 1 );
 define('AUTOSAVE_INTERVAL', 300); // seconds
 
 // allow shortcodes in widget
+add_filter( 'widget_text', 'shortcode_unautop' );
 add_filter('widget_text', 'do_shortcode');
 
 // add theme support for page featured image
@@ -283,5 +276,12 @@ function add_theme_caps() {
     $role->add_cap( 'edit_theme_options' ); 
 }
 add_action( 'admin_init', 'add_theme_caps');
+
+// shop manager to manage allinoneseo pluging
+function add_new_seo_cap() {
+    $role = get_role( 'shop_manager' );
+    $role->add_cap( 'aiosp_manage_seo' ); 
+}
+add_action( 'admin_init', 'add_new_seo_cap');
 
 ?>

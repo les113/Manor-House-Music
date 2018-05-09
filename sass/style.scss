@@ -87,7 +87,9 @@ p.wp-caption-text {
 	max-width:440px;
 	width:100%;
 }	
-
+.sitelogo {
+	margin:10px 0;
+}
 /* topmenu */
 
 #topbar {
@@ -213,7 +215,7 @@ p.wp-caption-text {
     overflow: hidden;
 }
 .nivo-caption {
-	top:45%;
+	top:340px;
 	padding: 0 100px !important;
 	text-align: center;
 	font-size: 50px;
@@ -229,6 +231,7 @@ p.wp-caption-text {
 .theme-default a.nivo-prevNav {left:40px !important;}
 .theme-default a.nivo-nextNav {right:40px !important;}
 
+
 @media only screen and (max-width : 480px) {
 	.theme-default .nivo-caption{
 			display:none !important;
@@ -238,28 +241,31 @@ p.wp-caption-text {
 @media only screen and (max-width : 768px) {
 	.nivo-caption {
 		font-size: 32px;
-		top:25%;
+		top:80px;
 	}
 }	
 
-@media only screen and (min-width : 992px) {
-	.transwrap {
-		padding-bottom:10px;
-	}
+@media only screen and (min-width : 769px) {
 	.metaslider {
-		margin-top:-95px;
-	}
-}	
-@media only screen and (min-width : 1366px) {
-	.metaslider {
-		margin-top:-260px;
+		margin-top:-80px;
 	}
 	.theme-default .nivo-directionNav a {
-		top:450px;
+		top:280px;
 	}
 	.nivo-caption {
-		top:400px;
+		top:220px;
+	}
+}	
+@media only screen and (min-width : 1200px) {
+	.metaslider {
+		margin-top:-90px;
+	}
+	.theme-default .nivo-directionNav a {
+		top:375px;
+	}
+	.nivo-caption {
 		padding: 0 300px !important;
+		top:280px;
 	}
 }
 
@@ -364,6 +370,7 @@ p.wp-caption-text {
 	}
 input, textarea, select {
 	border:1px solid $secondaryColour;
+	background-color:#fff;
 }
 label {
 	margin-bottom:10px;
@@ -418,7 +425,10 @@ button#catapultCookie {
 blockquote {
 	border-left:5px solid $secondaryColour;
 }	
-	
+span.date {
+	display:none !important;
+}
+
 // FAQs
 .ewd-ufaq-post-margin-symbol span {
 	font-size: 16px !important;
@@ -443,19 +453,17 @@ blockquote {
 @media only screen and (max-width : 768px) {
 	.navbar .navbar-collapse {
     text-align: right;
-	}
+	} 
 }
 
 /* Small Devices, Desktops - col-sm-x  */
 @media only screen and (min-width : 768px) {
-	.navbar {
-		margin-bottom:0px;
-	}
+
 	/* center navbar */
 	#mainnav {
 		.navbar-nav {
 			float:none;
-			margin:0 auto;
+			margin:10px auto;
 			display: block;
 			text-align: center;
 			border-top:solid 1px $primaryColour;
